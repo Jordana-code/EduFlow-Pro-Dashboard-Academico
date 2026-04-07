@@ -43,7 +43,7 @@ O **EduFlow Pro** atua diretamente nessa "dor", oferecendo uma interface central
     ```
 4.  Para visualizar a aplicação acesse o Link do Site Publicado:
     ```bash
-    npm install
+    https://jordana-code.github.io/EduFlow-Pro-Dashboard-Academico/
     ```
 
 ##  6. Testes e Qualidade
