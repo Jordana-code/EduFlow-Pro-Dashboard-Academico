@@ -1,0 +1,217 @@
+:root {
+    --primary-neon: #ff00ff;
+    --secondary-neon: #9d00ff;
+    --bg-dark: #0a0a0c;
+    --bg-card: #121217;
+    --text-main: #ffffff;
+    --text-muted: #71717a;
+    --border-neon: rgba(255, 0, 255, 0.2);
+    --success-neon: #00ff9f;
+    --warning: #f59e0b;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    background-image: radial-gradient(circle at 50% 10%, #1e0d36 0%, #0a0a0c 100%);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    min-height: 100vh;
+}
+
+.dashboard {
+    width: 100%;
+    max-width: 600px;
+    background: var(--bg-card);
+    border-radius: 24px;
+    padding: 35px;
+    border: 1px solid var(--border-neon);
+    box-shadow: 0 0 30px rgba(157, 0, 255, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 0;
+    background: linear-gradient(45deg, var(--primary-neon), var(--secondary-neon));
+    -webkit-background-clip: text; 
+    background-clip: text;         
+    -webkit-text-fill-color: transparent;
+}
+
+h1 span {
+    font-size: 0.5em;
+    border: 1px solid var(--primary-neon);
+    padding: 2px 8px;
+    border-radius: 6px;
+    -webkit-text-fill-color: var(--primary-neon);
+    margin-left: 8px;
+    box-shadow: 0 0 10px var(--primary-neon);
+    text-transform: uppercase;
+}
+
+#dateDisplay {
+    color: var(--secondary-neon);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Barra de Progresso */
+#percentTxt { color: var(--success-neon); font-weight: 800; font-size: 0.9rem; }
+.progress-bar-bg { background: #1f1f27; height: 8px; border-radius: 10px; margin-top: 8px; overflow: hidden; }
+#progressBar {
+    height: 100%;
+    background: linear-gradient(to right, var(--secondary-neon), var(--primary-neon));
+    box-shadow: 0 0 15px var(--primary-neon);
+    width: 0%;
+    transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Inputs Cyber */
+.controls-section { display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px; }
+.input-row { display: flex; gap: 12px; }
+
+input {
+    flex: 1;
+    padding: 14px 18px;
+    background: #1a1a24;
+    border: 1px solid #2a2a35;
+    border-radius: 12px;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: var(--primary-neon);
+    box-shadow: 0 0 12px rgba(255, 0, 255, 0.25);
+}
+
+select {
+    padding: 10px;
+    background: #1a1a24;
+    border: 1px solid #2a2a35;
+    border-radius: 12px;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+#addBtn {
+    background: linear-gradient(45deg, var(--secondary-neon), var(--primary-neon));
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0 25px;
+    transition: 0.3s;
+}
+
+#addBtn:hover {
+    box-shadow: 0 0 20px var(--primary-neon);
+    transform: translateY(-2px);
+}
+
+/* Filtros Neon */
+.filter-group { display: flex; justify-content: center; gap: 10px; }
+.filter-btn {
+    background: transparent;
+    border: 1px solid #2a2a35;
+    color: var(--text-muted);
+    padding: 8px 18px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.filter-btn.active {
+    border-color: var(--secondary-neon);
+    color: var(--secondary-neon);
+    background: rgba(157, 0, 255, 0.05);
+    box-shadow: 0 0 12px var(--secondary-neon);
+}
+
+/* Lista de Tarefas */
+ul { padding: 0; margin-top: 25px; }
+li {
+    list-style: none;
+    background: #16161e;
+    border: 1px solid #252530;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+li:hover {
+    background: #1c1c27;
+    border-color: var(--border-neon);
+}
+
+/* Cores das Bordas */
+.border-blue { border-left: 5px solid #00d2ff; box-shadow: -5px 0 15px rgba(0, 210, 255, 0.15); }
+.border-purple { border-left: 5px solid var(--secondary-neon); box-shadow: -5px 0 15px rgba(157, 0, 255, 0.15); }
+.border-orange { border-left: 5px solid #ff9d00; box-shadow: -5px 0 15px rgba(255, 157, 0, 0.15); }
+.border-green { border-left: 5px solid var(--success-neon); box-shadow: -5px 0 15px rgba(0, 255, 159, 0.15); }
+
+.task-info { flex: 1; display: flex; flex-direction: column; }
+.subject-tag {
+    color: var(--primary-neon);
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+.task-text { font-size: 1rem; color: #eee; font-weight: 500; }
+
+li.completed { opacity: 0.3; filter: grayscale(1); }
+li.completed .task-text { text-decoration: line-through; }
+
+.pin-btn { background: none; border: none; color: #333; font-size: 1.3rem; cursor: pointer; transition: 0.2s; }
+.pin-btn.active { color: var(--warning); text-shadow: 0 0 10px var(--warning); }
+
+.del-btn {
+    background: rgba(239, 68, 68, 0.05);
+    border: none;
+    color: var(--danger);
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: 0.2s;
+}
+
+.del-btn:hover { background: var(--danger); color: white; }
+
+#clearBtn {
+    background: none;
+    border: none;
+    color: #444;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-top: 20px;
+    width: 100%;
+    text-decoration: underline;
+}
