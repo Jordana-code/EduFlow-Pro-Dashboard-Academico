@@ -31,7 +31,7 @@ O **EduFlow Pro** atua diretamente nessa "dor", oferecendo uma interface central
 ##  5. Instalação e Execução
 1.  Clone este repositório:
     ```bash
-    git clone [https://github.com/seu-usuario/eduflow-pro.git](https://github.com/seu-usuario/eduflow-pro.git)
+    https://github.com/Jordana-code/EduFlow-Pro-Dashboard-Academico
     ```
 2.  Navegue até a pasta do projeto:
     ```bash
